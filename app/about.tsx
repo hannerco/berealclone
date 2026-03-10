@@ -1,5 +1,4 @@
 import { Image } from "expo-image";
-import { Link } from "expo-router";
 import { StyleSheet, View } from "react-native";
 
 export default function About() {
@@ -9,7 +8,7 @@ export default function About() {
         source={{ uri: "https://r-charts.com/es/miscelanea/procesamiento-imagenes-magick_files/figure-html/importar-imagen-r.png" }}
         style={styles.image}
       />
-      <Link href={"/index"}>Hola</Link>
+
     </View>
 
   );
