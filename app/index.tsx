@@ -1,18 +1,26 @@
-
+import { Image } from "expo-image";
 import { Link, useRouter } from "expo-router";
-import { Button, StyleSheet, Text, TextInput, View } from "react-native";
+import { ActivityIndicator, StyleSheet, Text, TextInput, View } from "react-native";
 
 export default function Index() {
   const router = useRouter();
   return (
     <View style={styles.container}>
-      <Text style={styles.helloWorldTitle} >HOLAAA, care bola</Text>
-      <Link href={"/about"}>Go to About Screen</Link>
-      <Text>¿Por qué no se ve?</Text>
+      <Text style={styles.helloWorldTitle}>Welcome to the index screen</Text>
+      <Image
+        source={
+          require('@/assets/images/react-logo.png')
+        }
+        style={styles.image}
+      />
+      <TextInput
+        style={styles.input}
+        placeholder="Email"
+      />
 
-      <Button title="Navigate" onPress={() => router.push("/about")} />
+      <Link href={'/about'}>Go to about</Link>
 
-      <TextInput placeholder="Email" />
+      <ActivityIndicator size={"large"} />
     </View>
 
   );
@@ -20,18 +28,26 @@ export default function Index() {
 
 const styles = StyleSheet.create({
   container: {
+    backgroundColor: "#123",
     flex: 1,
     alignItems: "center",
     justifyContent: "center",
   },
 
   helloWorldTitle: {
-    color: "red",
+    color: "white",
+    fontSize: 25,
   },
 
   image: {
     width: 200,
     height: 200,
+  },
+
+  input: {
+    backgroundColor: "#ddddbb",
+    width: 200,
+    height: 20,
   }
 
 });
