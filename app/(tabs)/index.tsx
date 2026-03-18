@@ -1,6 +1,7 @@
 import { Image } from "expo-image";
 import { Link, useRouter } from "expo-router";
-import { ActivityIndicator, StyleSheet, Text, TextInput, View } from "react-native";
+import { ActivityIndicator, Button, StyleSheet, Text, TextInput, View } from "react-native";
+
 
 export default function Index() {
   const router = useRouter();
@@ -19,6 +20,7 @@ export default function Index() {
       />
 
       <Link href={'/about'}>Go to about</Link>
+      <Button title="Profile" onPress={() => router.push("/(tabs)/profile")} />
 
       <ActivityIndicator size={"large"} />
     </View>
