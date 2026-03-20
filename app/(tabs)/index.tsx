@@ -1,4 +1,3 @@
-import { } from "@expo/ui/swift-ui";
 import { Image } from "expo-image";
 import { Link, useRouter } from "expo-router";
 import { ActivityIndicator, Button, StyleSheet, Text, TextInput, View } from "react-native";
